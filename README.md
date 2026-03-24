@@ -4,7 +4,7 @@ Personal portfolio website built with React, TypeScript, and Tailwind CSS.
 
 ## Live URL
 
-**[https://shrikartare.github.io/portfolio/](https://shrikartare.github.io/portfolio/)**
+**[https://shrikartare.github.io/shrikar-portfolio/](https://shrikartare.github.io/shrikar-portfolio/)**
 
 ## Tech Stack
 
@@ -26,10 +26,10 @@ This project uses a **manual** GitHub Actions workflow to deploy to GitHub Pages
 
 ### Steps to deploy:
 
-1. Push this repository to GitHub as `portfolio` (or any name — update `base` in `vite.config.js` to match).
+1. Push this repository to GitHub as `shrikar-portfolio`.
 2. In your GitHub repo, go to **Settings → Pages → Source** and select **GitHub Actions**.
 3. Go to **Actions → Deploy to GitHub Pages** and click **Run workflow**.
-4. Your site will be live at `https://shrikartare.github.io/portfolio/`.
+4. Your site will be live at `https://shrikartare.github.io/shrikar-portfolio/`.
 
 ## Build for Production
 

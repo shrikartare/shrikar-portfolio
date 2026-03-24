@@ -46,54 +46,74 @@ export default function Hero(): React.JSX.Element {
         }}
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-white/80 mb-8 text-sm text-body shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          Available for opportunities
-        </div>
+      <div className="relative z-10 max-w-5xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          {/* Profile photo */}
+          <div className="shrink-0">
+            <div className="relative">
+              <div className="absolute -inset-3 bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 rounded-full blur-lg" />
+              <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white shadow-xl ring-1 ring-border">
+                <img
+                  src="/profile.png"
+                  alt="Shrikar Tare"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold text-heading leading-tight tracking-tight">
-          Hi, I'm{' '}
-          <span className="text-primary">
-            Shrikar Tare
-          </span>
-        </h1>
+          {/* Text content */}
+          <div className="text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-white/80 mb-6 text-sm text-body shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Available for opportunities
+            </div>
 
-        <p className="mt-6 text-xl md:text-2xl text-body max-w-2xl mx-auto leading-relaxed">
-          Lead Engineer specializing in{' '}
-          <span className="text-heading font-semibold">React.js</span> &{' '}
-          <span className="text-heading font-semibold">Node.js</span> with 8+ years
-          of building performant web applications.
-        </p>
+            <h1 className="text-5xl md:text-6xl font-bold text-heading leading-tight tracking-tight">
+              Hi, I'm{' '}
+              <span className="text-primary">
+                Shrikar Tare
+              </span>
+            </h1>
 
-        <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
-          <a
-            href="#contact"
-            className="px-8 py-3.5 rounded-xl bg-primary hover:bg-primary-dark text-white font-medium transition-all duration-200 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30"
-          >
-            Get in Touch
-          </a>
-          <a
-            href="#experience"
-            className="px-8 py-3.5 rounded-xl border border-border text-heading hover:bg-surface font-medium transition-all duration-200"
-          >
-            View My Work
-          </a>
-        </div>
+            <p className="mt-5 text-xl md:text-2xl text-body max-w-2xl leading-relaxed">
+              Senior Software Engineer specializing in{' '}
+              <span className="text-heading font-semibold">React.js</span>,{' '}
+              <span className="text-heading font-semibold">Node.js</span> &{' '}
+              <span className="text-heading font-semibold">AI-driven solutions</span>,
+              building performant web applications and intelligent workflows.
+            </p>
 
-        <div className="mt-12 flex items-center justify-center gap-4">
-          {socialLinks.map((social) => (
-            <a
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.label}
-              className="p-3 rounded-xl border border-border bg-white text-body hover:text-primary hover:border-primary/30 hover:shadow-md transition-all duration-200"
-            >
-              {social.icon}
-            </a>
-          ))}
+            <div className="mt-8 flex items-center justify-center md:justify-start gap-4 flex-wrap">
+              <a
+                href="#contact"
+                className="px-8 py-3.5 rounded-xl bg-primary hover:bg-primary-dark text-white font-medium transition-all duration-200 shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30"
+              >
+                Get in Touch
+              </a>
+              <a
+                href="#experience"
+                className="px-8 py-3.5 rounded-xl border border-border text-heading hover:bg-surface font-medium transition-all duration-200"
+              >
+                View My Work
+              </a>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center md:justify-start gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="p-3 rounded-xl border border-border bg-white text-body hover:text-primary hover:border-primary/30 hover:shadow-md transition-all duration-200"
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 

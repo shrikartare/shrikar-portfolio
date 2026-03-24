@@ -1,16 +1,39 @@
-# React + Vite
+# Shrikar Tare — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Live URL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**[https://shrikartare.github.io/portfolio/](https://shrikartare.github.io/portfolio/)**
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19 + TypeScript
+- Tailwind CSS v4
+- Vite 8
+- GitHub Pages (hosting)
 
-## Expanding the ESLint configuration
+## Local Development
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Deployment
+
+This project uses a **manual** GitHub Actions workflow to deploy to GitHub Pages.
+
+### Steps to deploy:
+
+1. Push this repository to GitHub as `portfolio` (or any name — update `base` in `vite.config.js` to match).
+2. In your GitHub repo, go to **Settings → Pages → Source** and select **GitHub Actions**.
+3. Go to **Actions → Deploy to GitHub Pages** and click **Run workflow**.
+4. Your site will be live at `https://shrikartare.github.io/portfolio/`.
+
+## Build for Production
+
+```bash
+npm run build
+npm run preview
+```

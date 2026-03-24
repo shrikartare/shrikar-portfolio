@@ -52,6 +52,12 @@ const skillCategories: SkillCategory[] = [
     ],
   },
   {
+    title: 'AI & Machine Learning',
+    color: 'text-violet-600',
+    bgColor: 'bg-violet-50',
+    skills: ['AI', 'Agentic AI', 'LangChain', 'RAG Systems', 'AI Workflow Integration'],
+  },
+  {
     title: 'Other',
     color: 'text-rose-600',
     bgColor: 'bg-rose-50',

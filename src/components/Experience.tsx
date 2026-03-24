@@ -19,9 +19,8 @@ const experiences: ExperienceItem[] = [
     location: 'Pune, India',
     period: 'Aug 2021 – Present',
     bullets: [
-      'Architected and developed reusable React.js component library adopted by 10+ teams across a multi-brand e-commerce platform.',
-      'Improved Time to Interactive from 4.5s to 2.6s (90% performance gain) using React optimization and lazy loading.',
       'Built responsive, themeable product detail pages used by millions of users, generating $240K AUD monthly.',
+      'Built responsive, themeable customer service pages for multiple brands serving multiple locations and countries.',
       'Led module teams, conducted code reviews, and mentored junior engineers.',
       'Collaborated with SRE team to troubleshoot and resolve critical production incidents.',
     ],

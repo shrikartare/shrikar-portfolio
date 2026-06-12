@@ -1,7 +1,6 @@
 import { ArrowDown, Download, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './icons';
 import { RESUME_URL } from '../data/portfolio';
-import profileOutdoor from '../assets/profile-outdoor.png';
 import profileProfessional from '../assets/profile-professional.png';
 
 const socialLinks = [
@@ -34,29 +33,17 @@ export default function Hero(): React.JSX.Element {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="shrink-0">
             <div className="relative mx-auto lg:mx-0">
-              <div className="absolute -inset-6 bg-gradient-to-br from-primary/40 via-accent/20 to-transparent rounded-3xl blur-2xl" />
-              <div className="relative w-[min(100%,280px)] h-[300px] sm:w-[300px] sm:h-[320px] md:w-[320px] md:h-[340px]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl ring-2 ring-primary/30 -rotate-2">
-                  <img
-                    src={profileProfessional}
-                    alt="Shrikar Tare — Lead Software Engineer"
-                    width={208}
-                    height={208}
-                    loading="eager"
-                    fetchPriority="high"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <div className="absolute bottom-0 right-0 sm:right-2 w-28 h-36 sm:w-32 sm:h-40 md:w-36 md:h-44 rounded-2xl overflow-hidden border-4 border-white/25 shadow-2xl ring-2 ring-accent/40 rotate-3 z-10">
-                  <img
-                    src={profileOutdoor}
-                    alt="Shrikar Tare — outdoor portrait"
-                    width={144}
-                    height={176}
-                    loading="lazy"
-                    className="w-full h-full object-cover object-center"
-                  />
-                </div>
+              <div className="absolute -inset-4 bg-gradient-to-br from-primary/40 via-accent/20 to-transparent rounded-3xl blur-2xl" />
+              <div className="relative w-44 h-44 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl ring-2 ring-primary/30">
+                <img
+                  src={profileProfessional}
+                  alt="Shrikar Tare — Lead Software Engineer"
+                  width={224}
+                  height={224}
+                  loading="eager"
+                  fetchPriority="high"
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
           </div>

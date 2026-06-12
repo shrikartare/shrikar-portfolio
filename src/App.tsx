@@ -1,10 +1,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Clients from './components/Clients';
-import {
-  FeaturedWorkSection,
-  AdditionalProjectsSection,
-} from './components/FeaturedWork';
+import FeaturedWork from './components/FeaturedWork';
 import Metrics from './components/Metrics';
 import WhyHireMe from './components/WhyHireMe';
 import SystemDesign from './components/SystemDesign';
@@ -21,8 +18,7 @@ export default function App(): React.JSX.Element {
       <main>
         <Hero />
         <Clients />
-        <FeaturedWorkSection />
-        <AdditionalProjectsSection />
+        <FeaturedWork />
         <Metrics />
         <WhyHireMe />
         <SystemDesign />

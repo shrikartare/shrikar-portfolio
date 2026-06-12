@@ -134,8 +134,9 @@ function TagBlock({
   );
 }
 
-export function FeaturedWorkSection(): React.JSX.Element {
+export default function FeaturedWork(): React.JSX.Element {
   const featured = caseStudies.filter((s) => s.featured);
+  const other = caseStudies.filter((s) => !s.featured);
 
   return (
     <section id="work" className="py-24 px-6 section-muted">
@@ -151,30 +152,22 @@ export function FeaturedWorkSection(): React.JSX.Element {
             <CaseStudyCard key={study.title} study={study} />
           ))}
         </div>
-      </div>
-    </section>
-  );
-}
 
-export function AdditionalProjectsSection(): React.JSX.Element {
-  const other = caseStudies.filter((s) => !s.featured);
-
-  if (other.length === 0) return <></>;
-
-  return (
-    <section id="additional-projects" className="py-24 px-6 section-white">
-      <div className="max-w-6xl mx-auto">
-        <SectionHeading
-          label="Portfolio"
-          title="Additional Projects"
-          subtitle="Side projects and client work — full-stack builds deployed to production."
-        />
-
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {other.map((study) => (
-            <CaseStudyCard key={study.title} study={study} />
-          ))}
-        </div>
+        {other.length > 0 && (
+          <div id="additional-projects" className="mt-16 pt-16 border-t border-border">
+            <h3 className="text-xl font-semibold text-heading mb-2">
+              Additional Projects
+            </h3>
+            <p className="text-sm text-muted mb-8">
+              Side projects and client work — full-stack builds deployed to production.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {other.map((study) => (
+                <CaseStudyCard key={study.title} study={study} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

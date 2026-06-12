@@ -32,7 +32,7 @@ export default function Education(): React.JSX.Element {
                     {edu.status}
                   </span>
                 </div>
-                <p className="text-sm text-muted mt-1">{edu.institution}</p>
+                <p className="text-base text-muted mt-1">{edu.institution}</p>
               </div>
             </GlassCard>
           ))}

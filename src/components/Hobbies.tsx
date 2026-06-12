@@ -22,7 +22,7 @@ export default function Hobbies(): React.JSX.Element {
               <h3 className="mt-4 text-xl font-semibold text-heading">
                 {hobby.name}
               </h3>
-              <p className="mt-2 text-sm text-body">{hobby.description}</p>
+              <p className="mt-2 text-base text-body">{hobby.description}</p>
             </GlassCard>
           ))}
         </div>

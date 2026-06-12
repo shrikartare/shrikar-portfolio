@@ -28,10 +28,10 @@ export default function Metrics(): React.JSX.Element {
               <div className="text-xl md:text-2xl font-bold text-primary leading-tight mt-1">
                 {metric.value}
               </div>
-              <div className="mt-2 text-sm font-semibold text-heading">
+              <div className="mt-2 text-base font-semibold text-heading">
                 {metric.label}
               </div>
-              <div className="mt-1 text-xs text-muted leading-snug">
+              <div className="mt-1 text-sm text-muted leading-snug">
                 {metric.detail}
               </div>
             </div>

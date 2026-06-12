@@ -21,7 +21,7 @@ export default function TechnicalLeadership(): React.JSX.Element {
                 {area.items.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2.5 text-sm text-body leading-relaxed"
+                    className="flex items-start gap-2.5 text-base text-body leading-relaxed"
                   >
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
                     {item}
@@ -44,7 +44,7 @@ export default function TechnicalLeadership(): React.JSX.Element {
                     <h4 className="text-lg font-semibold text-heading">
                       {exp.role}
                     </h4>
-                    <p className="text-primary text-sm font-medium mt-0.5">
+                    <p className="text-primary text-base font-medium mt-0.5">
                       {exp.company}
                       {exp.client && (
                         <span className="text-muted"> · {exp.client}</span>
@@ -60,7 +60,7 @@ export default function TechnicalLeadership(): React.JSX.Element {
                   {exp.highlights.map((h) => (
                     <li
                       key={h}
-                      className="flex items-start gap-2 text-sm text-body"
+                      className="flex items-start gap-2 text-base text-body"
                     >
                       <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
                       {h}

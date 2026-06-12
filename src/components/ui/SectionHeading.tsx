@@ -33,7 +33,7 @@ export default function SectionHeading({
       </h2>
       {subtitle && (
         <p
-          className={`mt-4 text-lg leading-relaxed ${
+          className={`mt-4 text-xl leading-relaxed ${
             isLight ? 'text-slate-300' : 'text-body'
           }`}
         >

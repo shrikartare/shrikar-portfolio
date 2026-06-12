@@ -49,7 +49,7 @@ export default function Contact(): React.JSX.Element {
                   {link.icon}
                 </div>
                 <h3 className="text-heading font-medium">{link.label}</h3>
-                <p className="text-sm text-muted mt-1 group-hover:text-primary transition-colors">
+                <p className="text-base text-muted mt-1 group-hover:text-primary transition-colors">
                   {link.value}
                 </p>
               </div>
@@ -60,7 +60,7 @@ export default function Contact(): React.JSX.Element {
         <div className="mt-6">
           <div className="bg-white/10 border border-white/20 rounded-2xl p-5 flex items-center justify-center gap-3 text-center backdrop-blur-sm">
             <MapPin size={18} className="text-blue-200" />
-            <span className="text-slate-200">
+            <span className="text-slate-200 text-base">
               Pune, India · Open to remote & hybrid
             </span>
           </div>

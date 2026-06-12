@@ -20,7 +20,7 @@ export default function SystemDesign(): React.JSX.Element {
                 {area.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1.5 text-xs rounded-lg bg-surface text-body border border-border font-medium"
+                    className="px-3 py-1.5 text-sm rounded-lg bg-surface text-body border border-border font-medium"
                   >
                     {skill}
                   </span>

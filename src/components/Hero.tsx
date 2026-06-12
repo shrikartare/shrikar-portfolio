@@ -62,7 +62,7 @@ export default function Hero(): React.JSX.Element {
               Platforms
             </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed">
+            <p className="mt-6 text-xl md:text-2xl text-slate-300 max-w-2xl leading-relaxed">
               8+ years delivering high-scale engineering solutions across{' '}
               <span className="text-white font-medium">Retail</span>,{' '}
               <span className="text-white font-medium">Banking</span>,{' '}

@@ -16,7 +16,7 @@ export default function WhyHireMe(): React.JSX.Element {
           {whyHireMe.map((item) => (
             <GlassCard key={item.title}>
               <h3 className="text-lg font-semibold text-heading">{item.title}</h3>
-              <p className="mt-3 text-body text-sm leading-relaxed">
+              <p className="mt-3 text-body text-base leading-relaxed">
                 {item.description}
               </p>
             </GlassCard>

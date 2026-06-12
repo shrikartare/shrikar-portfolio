@@ -22,11 +22,22 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-size: 17px;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      font-size: 18px;
+    }
   }
 
   body {
-    @apply bg-surface text-body font-sans antialiased;
+    @apply bg-surface text-body font-sans antialiased text-base leading-relaxed;
     margin: 0;
+  }
+
+  p {
+    @apply leading-relaxed;
   }
 
   ::selection {

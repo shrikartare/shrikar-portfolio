@@ -13,7 +13,7 @@ function CaseStudyCard({ study }: { study: CaseStudy }): React.JSX.Element {
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h3 className="text-xl font-semibold text-heading">{study.title}</h3>
-          <p className="text-sm text-primary font-medium mt-1">{study.role}</p>
+          <p className="text-base text-primary font-medium mt-1">{study.role}</p>
         </div>
         <div className="flex gap-2">
           {study.websiteUrl && (
@@ -52,15 +52,15 @@ function CaseStudyCard({ study }: { study: CaseStudy }): React.JSX.Element {
         ))}
       </div>
 
-      <div className="mt-5 space-y-4 text-sm">
+      <div className="mt-5 space-y-4 text-base">
         <div>
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-muted mb-1">
             Problem
           </h4>
           <p className="text-body leading-relaxed">{study.problem}</p>
         </div>
         <div>
-          <h4 className="text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-muted mb-1">
             Solution
           </h4>
           <p className="text-body leading-relaxed">{study.solution}</p>
@@ -80,7 +80,7 @@ function CaseStudyCard({ study }: { study: CaseStudy }): React.JSX.Element {
       </button>
 
       {expanded && (
-        <div className="mt-5 pt-5 border-t border-border space-y-5 text-sm">
+        <div className="mt-5 pt-5 border-t border-border space-y-5 text-base">
           <DetailBlock title="Architecture" content={study.architecture} />
           <DetailBlock title="Business Impact" content={study.impact} />
           <TagBlock title="Technologies" items={study.technologies} />
@@ -102,10 +102,10 @@ function DetailBlock({
 }): React.JSX.Element {
   return (
     <div>
-      <h4 className="text-xs font-semibold uppercase tracking-wider text-muted mb-1">
+      <h4 className="text-sm font-semibold uppercase tracking-wider text-muted mb-1">
         {title}
       </h4>
-      <p className="text-body leading-relaxed">{content}</p>
+      <p className="text-body text-base leading-relaxed">{content}</p>
     </div>
   );
 }
@@ -119,12 +119,12 @@ function TagBlock({
 }): React.JSX.Element {
   return (
     <div>
-      <h4 className="text-xs font-semibold uppercase tracking-wider text-muted mb-2">
+      <h4 className="text-sm font-semibold uppercase tracking-wider text-muted mb-2">
         {title}
       </h4>
       <ul className="space-y-1.5">
         {items.map((item) => (
-          <li key={item} className="flex items-start gap-2 text-body">
+          <li key={item} className="flex items-start gap-2 text-body text-base">
             <span className="mt-1.5 w-1 h-1 rounded-full bg-primary shrink-0" />
             {item}
           </li>
@@ -158,7 +158,7 @@ export default function FeaturedWork(): React.JSX.Element {
             <h3 className="text-xl font-semibold text-heading mb-2">
               Additional Projects
             </h3>
-            <p className="text-sm text-muted mb-8">
+            <p className="text-base text-muted mb-8">
               Side projects and client work — full-stack builds deployed to production.
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">

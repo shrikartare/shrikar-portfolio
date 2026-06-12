@@ -6,11 +6,11 @@ export default function Footer(): React.JSX.Element {
       <div className="max-w-6xl mx-auto">
         <p className="sr-only">{atsKeywords.join(', ')}</p>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm">
+          <p className="text-base">
             &copy; {new Date().getFullYear()} Shrikar Tare. Lead Software
             Engineer.
           </p>
-          <p className="text-sm">
+          <p className="text-base">
             <span className="text-blue-400">React</span>
             {' · '}
             <span className="text-teal-400">TypeScript</span>

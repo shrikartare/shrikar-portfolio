@@ -47,8 +47,8 @@ export default function Clients(): React.JSX.Element {
                 </a>
               </div>
 
-              <p className="text-sm text-primary font-medium mt-1">{client.role}</p>
-              <p className="mt-4 text-body text-sm leading-relaxed flex-1">
+              <p className="text-base text-primary font-medium mt-1">{client.role}</p>
+              <p className="mt-4 text-body text-base leading-relaxed flex-1">
                 {client.description}
               </p>
 

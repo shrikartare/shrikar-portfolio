@@ -3,8 +3,10 @@ import { Menu, X } from 'lucide-react';
 import { RESUME_URL } from '../data/portfolio';
 
 const navLinks = [
-  { label: 'Work', href: '#work' },
   { label: 'Clients', href: '#clients' },
+  { label: 'Work', href: '#work' },
+  { label: 'Projects', href: '#additional-projects' },
+  { label: 'Impact', href: '#metrics' },
   { label: 'Systems', href: '#systems' },
   { label: 'Leadership', href: '#leadership' },
   { label: 'Education', href: '#education' },

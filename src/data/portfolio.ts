@@ -164,6 +164,7 @@ export const caseStudies: CaseStudy[] = [
       'Reduced dependency on engineering for AEM navigation',
       'Demonstrated production GenAI value at enterprise scale',
     ],
+    websiteUrl: 'https://shrikartare.github.io/chatbot-frontend/',
     githubUrl: 'https://github.com/shrikartare/chatbot-frontend',
     featured: true,
   },
@@ -220,6 +221,7 @@ export const caseStudies: CaseStudy[] = [
       'Deployed platform for traffic police initiatives',
       'Interactive traffic safety education content',
     ],
+    websiteUrl: 'https://shrikartare.github.io/children-traffic-park/',
     githubUrl: 'https://github.com/shrikartare/children-traffic-park',
   },
   {
@@ -246,6 +248,7 @@ export const caseStudies: CaseStudy[] = [
       'Professional digital brand for legal practice',
       'Client-facing service portal',
     ],
+    websiteUrl: 'https://shrikartare.github.io/legal-solutions/',
     githubUrl: 'https://github.com/shrikartare/legal-solutions',
   },
 ];
@@ -290,7 +293,7 @@ export const systemDesignAreas = [
   },
   {
     title: 'Cloud Architecture',
-    skills: ['Azure', 'Azure DevOps', 'Azure Pipelines', 'Cloud-native deployment', 'AZ-900 certified'],
+    skills: ['Azure', 'Azure DevOps', 'Azure Pipelines', 'Cloud-native deployment'],
   },
   {
     title: 'Distributed Systems',

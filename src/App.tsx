@@ -1,12 +1,14 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Clients from './components/Clients';
+import {
+  FeaturedWorkSection,
+  AdditionalProjectsSection,
+} from './components/FeaturedWork';
 import Metrics from './components/Metrics';
 import WhyHireMe from './components/WhyHireMe';
-import FeaturedWork from './components/FeaturedWork';
-import Clients from './components/Clients';
 import SystemDesign from './components/SystemDesign';
 import TechnicalLeadership from './components/TechnicalLeadership';
-import Certifications from './components/Certifications';
 import Education from './components/Education';
 import Hobbies from './components/Hobbies';
 import Contact from './components/Contact';
@@ -18,13 +20,13 @@ export default function App(): React.JSX.Element {
       <Navbar />
       <main>
         <Hero />
+        <Clients />
+        <FeaturedWorkSection />
+        <AdditionalProjectsSection />
         <Metrics />
         <WhyHireMe />
-        <FeaturedWork />
-        <Clients />
         <SystemDesign />
         <TechnicalLeadership />
-        <Certifications />
         <Education />
         <Hobbies />
         <Contact />

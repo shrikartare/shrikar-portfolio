@@ -33,10 +33,10 @@ export default function Hero(): React.JSX.Element {
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-20">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           <div className="shrink-0">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-primary/40 via-accent/20 to-transparent rounded-3xl blur-2xl" />
-              <div className="relative flex flex-row items-end justify-center gap-3">
-                <div className="w-40 h-40 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl ring-2 ring-primary/30">
+            <div className="relative mx-auto lg:mx-0">
+              <div className="absolute -inset-6 bg-gradient-to-br from-primary/40 via-accent/20 to-transparent rounded-3xl blur-2xl" />
+              <div className="relative w-[min(100%,280px)] h-[300px] sm:w-[300px] sm:h-[320px] md:w-[320px] md:h-[340px]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-44 h-44 sm:w-48 sm:h-48 md:w-52 md:h-52 rounded-2xl overflow-hidden border-4 border-white/20 shadow-2xl ring-2 ring-primary/30 -rotate-2">
                   <img
                     src={profileProfessional}
                     alt="Shrikar Tare — Lead Software Engineer"
@@ -47,12 +47,12 @@ export default function Hero(): React.JSX.Element {
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="w-24 h-32 sm:w-28 sm:h-36 md:w-32 md:h-40 rounded-2xl overflow-hidden border-4 border-white/20 shadow-xl ring-2 ring-accent/30 -mb-2">
+                <div className="absolute bottom-0 right-0 sm:right-2 w-28 h-36 sm:w-32 sm:h-40 md:w-36 md:h-44 rounded-2xl overflow-hidden border-4 border-white/25 shadow-2xl ring-2 ring-accent/40 rotate-3 z-10">
                   <img
                     src={profileOutdoor}
                     alt="Shrikar Tare — outdoor portrait"
-                    width={128}
-                    height={160}
+                    width={144}
+                    height={176}
                     loading="lazy"
                     className="w-full h-full object-cover object-center"
                   />
@@ -127,9 +127,9 @@ export default function Hero(): React.JSX.Element {
       </div>
 
       <a
-        href="#metrics"
+        href="#clients"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-400 hover:text-white transition-colors animate-bounce"
-        aria-label="Scroll to metrics"
+        aria-label="Scroll to clients"
       >
         <ArrowDown size={22} />
       </a>

@@ -1,22 +1,19 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { RESUME_URL } from '../data/portfolio';
 
-interface NavLink {
-  label: string;
-  href: string;
-}
-
-const navLinks: NavLink[] = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
+const navLinks = [
+  { label: 'Work', href: '#work' },
+  { label: 'Clients', href: '#clients' },
+  { label: 'Systems', href: '#systems' },
+  { label: 'Leadership', href: '#leadership' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
 
 export default function Navbar(): React.JSX.Element {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const onScroll = (): void => setScrolled(window.scrollY > 50);
@@ -28,33 +25,39 @@ export default function Navbar(): React.JSX.Element {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-xl border-b border-border shadow-sm'
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-lg'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a
           href="#hero"
-          className="text-xl font-bold text-primary"
+          className={`text-xl font-bold transition-colors ${
+            scrolled ? 'text-white' : 'text-white'
+          }`}
         >
           ST
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-body hover:text-primary transition-colors duration-200"
+              className={`text-sm transition-colors duration-200 ${
+                scrolled
+                  ? 'text-slate-300 hover:text-white'
+                  : 'text-slate-200 hover:text-white'
+              }`}
             >
               {link.label}
             </a>
           ))}
           <a
-            href="/ShrikarTare_LeadEngineer_CV.pdf"
+            href={RESUME_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm px-4 py-2 rounded-lg bg-primary hover:bg-primary-dark text-white transition-colors duration-200"
+            className="text-sm px-4 py-2 rounded-lg bg-white text-primary-dark font-medium hover:bg-blue-50 transition-colors"
           >
             Resume
           </a>
@@ -62,30 +65,31 @@ export default function Navbar(): React.JSX.Element {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-body hover:text-primary"
+          className="lg:hidden text-white hover:text-blue-200"
+          aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-border">
+        <div className="lg:hidden bg-slate-900/98 backdrop-blur-xl border-t border-white/10">
           <div className="px-6 py-4 flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-body hover:text-primary transition-colors"
+                className="text-slate-300 hover:text-white transition-colors"
               >
                 {link.label}
               </a>
             ))}
             <a
-              href="/ShrikarTare_LeadEngineer_CV.pdf"
+              href={RESUME_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm px-4 py-2 rounded-lg bg-primary text-white text-center"
+              className="text-sm px-4 py-2 rounded-lg bg-white text-primary-dark text-center font-medium"
             >
               Resume
             </a>

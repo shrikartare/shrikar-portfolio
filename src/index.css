@@ -2,17 +2,21 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --color-primary: #4338ca;
-  --color-primary-dark: #3730a3;
-  --color-primary-light: #eef2ff;
+  --color-primary: #1e40af;
+  --color-primary-dark: #1e3a8a;
+  --color-primary-light: #dbeafe;
   --color-accent: #0d9488;
-  --color-accent-light: #f0fdfa;
-  --color-surface: #f8fafc;
+  --color-accent-light: #ccfbf1;
+  --color-surface: #f1f5f9;
+  --color-surface-alt: #e2e8f0;
+  --color-surface-elevated: #ffffff;
   --color-card: #ffffff;
-  --color-heading: #1e293b;
+  --color-heading: #0f172a;
   --color-body: #475569;
-  --color-muted: #94a3b8;
-  --color-border: #e2e8f0;
+  --color-muted: #64748b;
+  --color-border: #cbd5e1;
+  --color-navy: #0f172a;
+  --color-navy-light: #1e293b;
 }
 
 @layer base {
@@ -21,12 +25,12 @@
   }
 
   body {
-    @apply bg-white text-body font-sans antialiased;
+    @apply bg-surface text-body font-sans antialiased;
     margin: 0;
   }
 
   ::selection {
-    @apply bg-primary/15 text-primary;
+    @apply bg-primary/20 text-primary-dark;
   }
 
   ::-webkit-scrollbar {
@@ -34,10 +38,52 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-surface;
+    @apply bg-surface-alt;
   }
 
   ::-webkit-scrollbar-thumb {
     @apply bg-border rounded-full hover:bg-muted;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/95 backdrop-blur-xl border border-border shadow-md;
+  }
+
+  .glass-hover {
+    @apply hover:shadow-lg hover:border-primary/25 transition-all duration-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-blue-600 to-accent bg-clip-text text-transparent;
+  }
+
+  .section-glow {
+    background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30, 64, 175, 0.12), transparent);
+  }
+
+  .section-band {
+    @apply bg-gradient-to-br from-slate-800 via-slate-900 to-primary-dark text-white;
+  }
+
+  .section-muted {
+    @apply bg-surface;
+  }
+
+  .section-white {
+    @apply bg-white;
+  }
+
+  .card {
+    @apply bg-white border border-border rounded-2xl shadow-md shadow-slate-200/60;
+  }
+
+  .card-hover {
+    @apply hover:shadow-xl hover:shadow-primary/10 hover:border-primary/20 hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .card-tinted {
+    @apply bg-gradient-to-br from-white to-primary-light/30 border border-primary/10 rounded-2xl shadow-md;
   }
 }

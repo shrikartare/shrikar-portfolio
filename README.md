@@ -33,24 +33,58 @@ Output is written to the `dist/` folder.
 
 ## Deployment (GitHub Pages)
 
-This project deploys via **GitHub Actions**.
+The workflow (`.github/workflows/deploy.yml`) supports **two ways** to deploy:
 
-### First-time setup
+| Trigger | How |
+|---------|-----|
+| **Automatic** | Push or merge to `main` |
+| **Manual** | **Actions → Deploy to GitHub Pages → Run workflow** |
 
-1. Push this repository to GitHub as `shrikar-portfolio` (e.g. `shrikartare/shrikar-portfolio`).
-2. In **Settings → Pages → Source**, select **GitHub Actions**.
-3. Push to `main` or run manually:
-   - **Actions → Deploy to GitHub Pages → Run workflow**
+Both build the site and push the output to the **`gh-pages`** branch. GitHub Pages serves from that branch.
 
-### Automatic deploys
+### GitHub settings (required — do once per repo)
 
-Every push to the `main` branch builds `dist/` and publishes to GitHub Pages.
+1. **Settings → Actions → General → Workflow permissions**
+   - Select **Read and write permissions**
+   - Save
+
+2. **Settings → Pages → Build and deployment**
+   - **Source:** Deploy from a branch *(not "GitHub Actions")*
+   - **Branch:** `gh-pages` → **`/ (root)`**
+   - Save
+
+3. Run the workflow once (push to `main` or manual run) so the `gh-pages` branch is created.
+
+4. Wait 1–2 minutes, then open your live URL.
+
+These repos are **public**, so GitHub Pages works on the free plan with no extra visibility changes.
+
+### Deploy manually only
+
+Edit `.github/workflows/deploy.yml` and **remove** the `push:` block so only this remains:
+
+```yaml
+on:
+  workflow_dispatch:
+```
+
+Then deploy only from **Actions → Run workflow**.
 
 ### Live site
 
 `https://<your-github-username>.github.io/shrikar-portfolio/`
 
-The Vite `base` in `vite.config.js` is set to `/shrikar-portfolio/` for correct asset paths on GitHub Pages.
+The Vite `base` in `vite.config.js` is set to `/shrikar-portfolio/` for correct asset paths.
+
+### Troubleshooting
+
+| Issue | Fix |
+|-------|-----|
+| `Branch "main" is not allowed to deploy to github-pages` | **Pages → Source** must be **Deploy from a branch → gh-pages**, not "GitHub Actions". |
+| Workflow does not run on push | Confirm workflow file is on `main` and `push: branches: [main]` is present. |
+| `Permission denied` / cannot push `gh-pages` | **Settings → Actions → Workflow permissions → Read and write**. |
+| Pages shows 404 | Run workflow once; ensure `gh-pages` branch exists and Pages points to it. |
+| Blank page / missing assets | Confirm `base` in `vite.config.js` matches your repo name. |
 
 ## Related Projects
 
